@@ -10,11 +10,6 @@ import {
 import { User } from "./pages/user";
 
 const App = () => {
-  // useEffect(() => {
-  //   // Appelle la fonction de test lorsque le composant est monté
-  //   testFetchFunctions();
-  // }, []);
-
   return (
     <React.StrictMode>
       <Router>
