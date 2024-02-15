@@ -1,0 +1,72 @@
+@use "../utils/variables";
+
+
+
+.layout {
+    display: flex;
+
+    .welcome {
+        margin-bottom: 75px;
+
+
+        .hello {
+            display: flex;
+
+            h1 {
+                font-size: 48px;
+                margin-bottom: 0;
+            }
+
+            .red {
+                color: variables.$red;
+            }
+        }
+    }
+
+    .dashboard {
+        padding: 30px 0 0 80px;
+
+        .recap {
+            display: flex;
+
+            .charts {
+                margin-right: 30px
+            }
+        }
+
+        .nutrition_item {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: variables.$lightgrey;
+            padding: 32px;
+            margin: 30px 0;
+            border-radius: 5px;
+
+            p {
+                margin: 2px 0;
+            }
+
+            .nutrition_img {
+                margin-right: 32px;
+            }
+
+            .caption {
+                color: variables.$greyfont;
+                font-size: 14px;
+            }
+
+
+        }
+
+        .nutrition_item:first-child {
+            margin-top: 0;
+        }
+
+        .nutrition_item:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
