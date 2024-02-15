@@ -1,0 +1,25 @@
+@use "../utils/variables";
+
+.sidenav {
+    width: 120px;
+    height: 1024px;
+    background-color: variables.$blacknav;
+    color: variables.$white;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li {
+        margin: 20px 0;
+    }
+
+    p {
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+        margin: 50px;
+    }
+
+}
