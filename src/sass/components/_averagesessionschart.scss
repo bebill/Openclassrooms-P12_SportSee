@@ -1,0 +1,25 @@
+.average-session-chart {
+    border-radius: 5px;
+    background: red;
+    width: 265px;
+    height: 265px;
+    padding: 30px 5px;
+
+    &__title {
+        margin: 0 0 0 30px;
+        font-size: 15px;
+        opacity: 0.5;
+        color: purple;
+        white-space: pre-line;
+    }
+
+    &__tooltip {
+        width: 39px;
+        height: 25px;
+        background-color: green;
+        color: yellow;
+        font-size: 9px;
+        text-align: center;
+        line-height: 25px;
+    }
+}
