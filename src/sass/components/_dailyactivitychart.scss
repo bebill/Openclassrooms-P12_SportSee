@@ -1,0 +1,38 @@
+@use "../utils/variables";
+
+.daily-activity {
+    max-width: 835px;
+}
+
+.daily-activity-chart {
+    border-radius: 5px;
+    background: variables.$lightgrey;
+    padding: 25px;
+    padding-bottom: 0;
+
+    &__title {
+        margin: 0 0 0 30px;
+        color: variables.$blackchart;
+        font-size: 15px;
+    }
+
+    &__tooltip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: variables.$redchart;
+        color: variables.$white;
+        font-size: 9px;
+        border: none;
+        text-align: center;
+        width: 50px;
+        height: 60px;
+    }
+
+    .recharts-legend-item-text {
+        color: variables.$greyfont !important;
+        font-size: 14px;
+    }
+
+}
