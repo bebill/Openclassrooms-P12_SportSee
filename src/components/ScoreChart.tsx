@@ -21,8 +21,8 @@ export const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
     todayScore !== undefined ? todayScorePercentage : scorePercentage;
 
   return (
-    <article className="goal-chart">
-      <h2 className="goal-chart__title">Score</h2>
+    <article className="score-chart">
+      <h2 className="score-chart__title">Score</h2>
       <PieChart width={265} height={265}>
         <Pie
           data={scoreData}
@@ -41,8 +41,8 @@ export const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
           payload={[
             {
               value: (
-                <p className="goal-chart__legend">
-                  <span className="goal-chart__legend__value">
+                <p className="score-chart__legend">
+                  <span className="score-chart__legend__value">
                     {legendValue}%
                   </span>{" "}
                   de votre objectif
@@ -57,7 +57,7 @@ export const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
         />
       </PieChart>
       <svg
-        className="goal-chart__circle"
+        className="score-chart__circle"
         width="200"
         height="200"
         xmlns="http://www.w3.org/2000/svg"
