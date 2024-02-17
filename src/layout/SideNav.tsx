@@ -6,12 +6,12 @@ export const SideNav = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">
+            <NavLink to="#">
               <img src={`${process.env.PUBLIC_URL}/icon_yoga.svg`} alt="Yoga" />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="#">
               <img
                 src={`${process.env.PUBLIC_URL}/icon_swim.svg`}
                 alt="Swimming"
@@ -19,7 +19,7 @@ export const SideNav = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="#">
               <img
                 src={`${process.env.PUBLIC_URL}/icon_cycling.svg`}
                 alt="Cycling"
@@ -27,7 +27,7 @@ export const SideNav = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="#">
               <img
                 src={`${process.env.PUBLIC_URL}/icon_weight.svg`}
                 alt="Weight Training"
