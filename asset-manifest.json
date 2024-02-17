@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Openclassrooms-P12_SportSee/static/css/main.801101bf.css",
-    "main.js": "/Openclassrooms-P12_SportSee/static/js/main.5a53a7a0.js",
+    "main.css": "/Openclassrooms-P12_SportSee/static/css/main.3e171e7c.css",
+    "main.js": "/Openclassrooms-P12_SportSee/static/js/main.783f463b.js",
     "index.html": "/Openclassrooms-P12_SportSee/index.html",
-    "main.801101bf.css.map": "/Openclassrooms-P12_SportSee/static/css/main.801101bf.css.map",
-    "main.5a53a7a0.js.map": "/Openclassrooms-P12_SportSee/static/js/main.5a53a7a0.js.map"
+    "main.3e171e7c.css.map": "/Openclassrooms-P12_SportSee/static/css/main.3e171e7c.css.map",
+    "main.783f463b.js.map": "/Openclassrooms-P12_SportSee/static/js/main.783f463b.js.map"
   },
   "entrypoints": [
-    "static/css/main.801101bf.css",
-    "static/js/main.5a53a7a0.js"
+    "static/css/main.3e171e7c.css",
+    "static/js/main.783f463b.js"
   ]
 }
