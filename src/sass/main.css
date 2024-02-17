@@ -80,38 +80,38 @@ ul {
   line-height: 25px;
 }
 
-.radar-chart-performance {
+.performance-performance {
   border-radius: 5px;
   background: #282D30;
   width: 265px;
   height: 265px;
 }
-.radar-chart-performance .recharts-surface {
+.performance-performance .recharts-surface {
   height: 245px !important;
   padding-top: 15px;
 }
 
-.goal-chart {
+.score-chart {
   border-radius: 5px;
   background: #FBFBFB;
   width: 265px;
   height: 265px;
   position: relative;
 }
-.goal-chart__title {
+.score-chart__title {
   font-size: 15px;
   color: #282D30;
   position: absolute;
   top: 24px;
   left: 30px;
 }
-.goal-chart .recharts-default-legend .recharts-surface {
+.score-chart .recharts-default-legend .recharts-surface {
   display: none !important;
 }
-.goal-chart .recharts-legend-item {
+.score-chart .recharts-legend-item {
   margin: 10px;
 }
-.goal-chart__legend {
+.score-chart__legend {
   color: #74798C;
   font-size: 12px;
   z-index: 2;
@@ -120,12 +120,12 @@ ul {
   bottom: 35px !important;
   right: 35px !important;
 }
-.goal-chart__legend__value {
+.score-chart__legend__value {
   font-size: 26px;
   font-weight: bold;
   color: #282D30;
 }
-.goal-chart__circle {
+.score-chart__circle {
   position: absolute;
   top: 50%;
   left: 50%;
