@@ -26,7 +26,7 @@ export const PerformanceChart: React.FC<Props> = ({ data }) => {
   }));
 
   return (
-    <article className="radar-chart-performance">
+    <article className="performance-performance">
       <RadarChart
         data={PerformanceData}
         height={265}
