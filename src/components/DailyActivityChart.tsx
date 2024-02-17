@@ -51,8 +51,8 @@ export const DailyActivityChart: React.FC<Props> = ({ data }) => {
         className="daily-activity-chart__bar-chart"
         data={dailyActivityData}
         height={300}
-        width={700}
-        margin={{ top: 30, right: 0, left: 0, bottom: 30 }}
+        width={800}
+        margin={{ top: 30, right: 30, left: 30, bottom: 0 }}
         title="Activité quotidienne"
       >
         <CartesianGrid vertical={false} strokeDasharray="2 2" />
