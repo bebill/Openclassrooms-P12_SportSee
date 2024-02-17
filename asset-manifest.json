@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Openclassrooms-P12_SportSee/static/css/main.801101bf.css",
+    "main.js": "/Openclassrooms-P12_SportSee/static/js/main.5a53a7a0.js",
+    "index.html": "/Openclassrooms-P12_SportSee/index.html",
+    "main.801101bf.css.map": "/Openclassrooms-P12_SportSee/static/css/main.801101bf.css.map",
+    "main.5a53a7a0.js.map": "/Openclassrooms-P12_SportSee/static/js/main.5a53a7a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.801101bf.css",
+    "static/js/main.5a53a7a0.js"
+  ]
+}
