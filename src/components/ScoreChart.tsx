@@ -6,7 +6,7 @@ interface Props {
   todayScore: number;
 }
 
-const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
+export const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
   const scorePercentage = score * 100;
   const todayScorePercentage = todayScore * 100;
 
@@ -67,5 +67,3 @@ const ScoreChart: React.FC<Props> = ({ score, todayScore }) => {
     </article>
   );
 };
-
-export default ScoreChart;

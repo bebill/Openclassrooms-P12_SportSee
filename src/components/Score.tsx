@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUserData } from "../services/fetchData";
 import { useParams } from "react-router-dom";
-import ScoreChart from "./ScoreChart";
+import { ScoreChart } from "./ScoreChart";
 
 const Score = () => {
   const { id } = useParams<{ id: string }>();
