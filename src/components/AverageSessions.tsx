@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUserAverageSessions } from "../services/fetchData";
 import { useParams } from "react-router-dom";
-import AverageSessionsChart from "./AverageSessionsChart";
+import { AverageSessionsChart } from "./AverageSessionsChart";
 
 const AverageSessions = () => {
   const { id } = useParams<{ id: string }>();

@@ -58,7 +58,7 @@ const AverageSessionsCursor: React.FC<AverageSessionsCursorProps> = ({
   );
 };
 
-const AverageSessionsChart: React.FC<Props> = ({ data }) => {
+export const AverageSessionsChart: React.FC<Props> = ({ data }) => {
   const day = ["L", "M", "M", "J", "V", "S", "D"];
 
   const averageSessionsData = data.map((session, index) => ({
@@ -117,5 +117,3 @@ const AverageSessionsChart: React.FC<Props> = ({ data }) => {
     </article>
   );
 };
-
-export default AverageSessionsChart;
