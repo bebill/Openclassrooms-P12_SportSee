@@ -4,11 +4,12 @@
 
 @use "./components/dailyactivitychart";
 @use "./components/averagesessionschart";
+@use "./components/performancechart";
+@use "./components/scorechart";
+
 
 
 @use "./layout/topnav";
 @use "./layout/sidenav";
 
 @use "./pages/user";
-// @use "./pages/user";
-// @use "./pages/error404";

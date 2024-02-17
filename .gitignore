@@ -1,0 +1,51 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+
+# Ignore les fichiers de configuration
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# Ignore les fichiers de logs
+logs/
+*.log
+
+# Ignore les fichiers de cache
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.pnp
+.pnp.js
+
+# Ignore les fichiers de build
+build/
+dist/
+coverage/
+
+# Ignore les fichiers de sauvegarde
+*.bak
+
+# Ignore les fichiers de configuration spécifiques aux éditeurs de code
+.vscode/
+.idea/
+
+# Ignore les fichiers de sauvegarde Emacs
+*~
+
+# Ignore les fichiers de build de TypeScript
+*.js
+*.js.map
+
+# Ignore les fichiers de cache ESLint
+.eslintcache
+
+# Ignore les fichiers de configuration TypeScript
+tsconfig.tsbuildinfo
+
+# Ignore les fichiers de sauvegarde npm
+package-lock.json

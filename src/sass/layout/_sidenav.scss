@@ -2,7 +2,6 @@
 
 .sidenav {
     width: 120px;
-    height: 1024px;
     background-color: variables.$blacknav;
     color: variables.$white;
 
@@ -10,6 +9,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 180px 0 100px 0;
     }
 
     li {
@@ -22,4 +22,12 @@
         margin: 50px;
     }
 
+}
+
+@media screen and (min-width: 1367px) {
+    .sidenav {
+        nav {
+            margin: 220px 0 130px 0;
+        }
+    }
 }

@@ -1,0 +1,52 @@
+@use "../utils/variables";
+
+.goal-chart {
+    border-radius: 5px;
+    background: variables.$lightgrey;
+    width: 265px;
+    height: 265px;
+    position: relative;
+
+    &__title {
+        font-size: 15px;
+        color: variables.$blackchart;
+        position: absolute;
+        top: 24px;
+        left: 30px;
+    }
+
+    .recharts-default-legend {
+        .recharts-surface {
+            display: none !important;
+        }
+    }
+
+    .recharts-legend-item {
+        margin: 10px;
+    }
+
+    &__legend {
+        color: variables.$greyfont;
+        font-size: 12px;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        bottom: 35px !important;
+        right: 35px !important;
+
+        &__value {
+            font-size: 26px;
+            font-weight: bold;
+            color: variables.$blackchart;
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        fill: variables.$white;
+    }
+}

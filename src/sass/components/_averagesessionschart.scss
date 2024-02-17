@@ -1,23 +1,36 @@
+@use "../utils/variables";
+
 .average-session-chart {
     border-radius: 5px;
-    background: red;
+    background: variables.$red;
     width: 265px;
     height: 265px;
-    padding: 30px 5px;
 
-    &__title {
-        margin: 0 0 0 30px;
+    .recharts-surface {
+        border-radius: 5px;
+    }
+
+    .recharts-legend-item {
+        padding: 30px;
+        margin: 0;
         font-size: 15px;
         opacity: 0.5;
-        color: purple;
-        white-space: pre-line;
+        color: variables.$white;
+
+        .recharts-surface {
+            display: none !important;
+        }
+    }
+
+    .recharts-reference-line {
+        visibility: hidden;
     }
 
     &__tooltip {
-        width: 39px;
+        width: 34px;
         height: 25px;
-        background-color: green;
-        color: yellow;
+        background-color: variables.$white;
+        color: variables.$black;
         font-size: 9px;
         text-align: center;
         line-height: 25px;

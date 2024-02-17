@@ -6,7 +6,7 @@ import {
 } from "../data/mockData";
 
 const api = "http://localhost:3000/user";
-export const REACT_APP_SHOULD_USE_MOCK = false;
+export const REACT_APP_SHOULD_USE_MOCK = true;
 
 /**
  * Récupère les données USER_MAIN_DATA à partir de l'API ou des données de mock.
@@ -114,7 +114,7 @@ export const fetchUserPerformance = async (userId: number): Promise<any> => {
     }
 
     const apiResponse = await response.json();
-    return apiResponse;
+    return apiResponse.data;
   } catch (error) {
     console.error(
       "Une erreur s'est produite lors de la récupération des données de performance:",

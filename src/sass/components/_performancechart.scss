@@ -1,0 +1,13 @@
+@use "../utils/variables";
+
+.radar-chart-performance {
+    border-radius: 5px;
+    background: variables.$blackchart;
+    width: 265px;
+    height: 265px;
+
+    .recharts-surface {
+        height: 245px !important;
+        padding-top: 15px;
+    }
+}

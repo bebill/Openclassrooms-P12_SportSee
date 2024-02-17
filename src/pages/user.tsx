@@ -5,6 +5,8 @@ import { TopNav } from "../layout/TopNav";
 import { SideNav } from "../layout/SideNav";
 import DailyActivity from "../components/DailyActivity";
 import AverageSessions from "../components/AverageSessions";
+import Performance from "../components/Performance";
+import Score from "../components/Score";
 
 export const User = () => {
   const { id } = useParams<{ id: string }>();
@@ -52,7 +54,11 @@ export const User = () => {
           <div className="recap">
             <div className="charts">
               <DailyActivity />
-              <AverageSessions />
+              <div className="charts_aligned">
+                <AverageSessions />
+                <Performance />
+                <Score />
+              </div>
             </div>
             <aside className="nutrition_recap">
               <div className="nutrition_item">
