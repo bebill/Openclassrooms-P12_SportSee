@@ -36,7 +36,7 @@ const DailyActivityTooltip: React.FC<DailyActivityTooltipProps> = ({
   );
 };
 
-const DailyActivityChart: React.FC<Props> = ({ data }) => {
+export const DailyActivityChart: React.FC<Props> = ({ data }) => {
   const dailyActivityData = data.map((session, index) => ({
     day: index + 1,
     kilogram: session.kilogram,
@@ -125,5 +125,3 @@ const DailyActivityChart: React.FC<Props> = ({ data }) => {
     </article>
   );
 };
-
-export default DailyActivityChart;

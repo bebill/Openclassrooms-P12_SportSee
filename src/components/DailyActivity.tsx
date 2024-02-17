@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUserActivity } from "../services/fetchData";
 import { useParams } from "react-router-dom";
-import DailyActivityChart from "./DailyActivityChart";
+import { DailyActivityChart } from "./DailyActivityChart";
 
 const DailyActivity = () => {
   const { id } = useParams<{ id: string }>();
