@@ -1,5 +1,13 @@
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Rectangle,
+  Legend,
+} from "recharts";
 
 interface DataItem {
   day: number;
@@ -14,6 +22,12 @@ interface AverageSessionsTooltipProps {
   payload?: any[];
 }
 
+interface AverageSessionsCursorProps {
+  points: { x: number; y: number }[];
+  width: number;
+  height: number;
+}
+
 const AverageSessionsTooltip: React.FC<AverageSessionsTooltipProps> = ({
   payload,
 }) => {
@@ -23,6 +37,24 @@ const AverageSessionsTooltip: React.FC<AverageSessionsTooltipProps> = ({
     <div className="average-session-chart__tooltip">
       <p>{`${payload[0].value} min`}</p>
     </div>
+  );
+};
+
+const AverageSessionsCursor: React.FC<AverageSessionsCursorProps> = ({
+  points,
+  width,
+  height,
+}) => {
+  const { x } = points[0];
+  return (
+    <Rectangle
+      fill="rgba(0,0,0,0.1)"
+      stroke="none"
+      x={x}
+      y={0}
+      width={width}
+      height={height}
+    />
   );
 };
 
@@ -36,36 +68,50 @@ const AverageSessionsChart: React.FC<Props> = ({ data }) => {
 
   return (
     <article className="average-session-chart">
-      <h2 className="average-session-chart__title">
-        {`Durée moyenne des\n sessions`}
-      </h2>
       <LineChart
         data={averageSessionsData}
-        height={200}
-        width={200}
-        margin={{ top: 5, right: 10, left: 10, bottom: 5 }}
-        title="Session Moyenne"
+        height={265}
+        width={265}
+        title="Durée moyenne des sessions"
       >
-        <XAxis dataKey="day" tickLine={false} axisLine={false} stroke="#fff" />
-        <YAxis
-          yAxisId="duration"
-          dataKey="duration"
-          hide={true}
-          domain={["dataMin - 20", "dataMax + 20"]}
+        <defs>
+          <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.2} />
+            <stop offset="100%" stopColor="#FFFFFF" stopOpacity={1} />
+          </linearGradient>
+        </defs>
+        <XAxis
+          dataKey="day"
+          axisLine={false}
+          tickLine={false}
+          tick={{ fontSize: 12, fill: "#FFFFFF", opacity: 0.5 }}
+          padding={{ left: 10, right: 10 }}
         />
+        <YAxis hide={true} domain={["dataMin - 20", "dataMax + 20"]} />{" "}
         <Tooltip
           content={<AverageSessionsTooltip />}
+          cursor={
+            <AverageSessionsCursor points={[]} width={500} height={500} />
+          }
           wrapperStyle={{ outline: "none" }}
-          cursor={false}
         />
+        <Legend
+          align="left"
+          verticalAlign="top"
+          payload={[
+            {
+              value: "Durée moyenne des sessions",
+            },
+          ]}
+        ></Legend>
         <Line
           type="natural"
-          yAxisId="duration"
+          yAxisId={0}
           dataKey="duration"
           dot={false}
-          activeDot={{ r: 4 }}
+          activeDot={{ r: 3, fill: "#FFFFFF" }}
           strokeWidth={2.5}
-          stroke="#FFFFFF"
+          stroke="url(#lineGradient)"
         />
       </LineChart>
     </article>
