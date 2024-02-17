@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUserPerformance } from "../services/fetchData";
 import { useParams } from "react-router-dom";
-import PerformanceChart from "./PerformanceChart";
+import { PerformanceChart } from "./PerformanceChart";
 
 const Performance = () => {
   const { id } = useParams<{ id: string }>();

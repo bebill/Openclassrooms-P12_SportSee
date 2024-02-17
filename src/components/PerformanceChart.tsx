@@ -10,7 +10,7 @@ interface Props {
   data: DataItem[];
 }
 
-const PerformanceChart: React.FC<Props> = ({ data }) => {
+export const PerformanceChart: React.FC<Props> = ({ data }) => {
   const kind = [
     "Intensité",
     "Vitesse",
@@ -51,5 +51,3 @@ const PerformanceChart: React.FC<Props> = ({ data }) => {
     </article>
   );
 };
-
-export default PerformanceChart;
