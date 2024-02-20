@@ -13,7 +13,7 @@
 ## 1. Requirements
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
-- [Yarn] (https://yarnpkg.com/)
+- [Yarn](https://yarnpkg.com/)
 
 ## 2. Installation - Backend
 
