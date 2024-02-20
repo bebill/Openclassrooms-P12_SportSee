@@ -20,7 +20,7 @@ export const PerformanceChart: React.FC<Props> = ({ data }) => {
     "Cardio",
   ];
 
-  const PerformanceData = data.map((item, index) => ({
+  const performanceData = data.map((item, index) => ({
     kind: kind[index],
     value: item.value,
   }));
@@ -28,7 +28,7 @@ export const PerformanceChart: React.FC<Props> = ({ data }) => {
   return (
     <article className="performance-performance">
       <RadarChart
-        data={PerformanceData}
+        data={performanceData}
         height={265}
         width={265}
         title="Performance"
