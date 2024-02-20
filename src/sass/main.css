@@ -1,12 +1,11 @@
 body {
   margin: 0;
   min-width: 1024px;
-  max-width: 1440px;
   min-height: 780px;
-  max-height: 1024px;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: auto;
 }
 
 ul {
@@ -38,6 +37,7 @@ ul {
   background: #E60000;
   color: #FFFFFF;
   font-size: 9px;
+  font-weight: bold;
   border: none;
   text-align: center;
   width: 50px;
@@ -76,6 +76,7 @@ ul {
   background-color: #FFFFFF;
   color: #000000;
   font-size: 9px;
+  font-weight: bold;
   text-align: center;
   line-height: 25px;
 }
@@ -249,6 +250,43 @@ header nav ul {
 
 @media screen and (min-width: 1367px) {
   .layout .dashboard {
-    padding: 30px 0 0 100px;
+    margin: auto;
   }
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FF0101;
+  height: 100vh;
+}
+.error__title {
+  font-size: 208px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.error__text {
+  font-size: 36px;
+  text-align: center;
+  margin: 0 50px 50px;
+}
+.error__button {
+  padding: 10px 20px;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.error__button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.error__copyright {
+  align-self: flex-end;
+  color: #000000;
+  margin-top: 150px;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

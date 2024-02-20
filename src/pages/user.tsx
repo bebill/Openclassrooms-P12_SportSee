@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchUserData } from "../services/fetchData";
-import { useParams } from "react-router-dom";
-import { TopNav } from "../layout/TopNav";
+import { useNavigate, useParams } from "react-router-dom";
 import { SideNav } from "../layout/SideNav";
 import DailyActivity from "../components/DailyActivity";
 import AverageSessions from "../components/AverageSessions";
@@ -10,6 +9,7 @@ import Score from "../components/Score";
 
 export const User = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
@@ -21,25 +21,26 @@ export const User = () => {
           setUser(userMainData);
         } else {
           console.error("Utilisateur non trouvé");
+          navigate("/error404");
         }
       } catch (error) {
         console.error(
           "Une erreur s'est produite lors de la récupération des données utilisateur:",
           error
         );
+        navigate("/error404");
       }
     };
 
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
 
   if (!user) {
-    return <div>Chargement...</div>;
+    return null;
   }
 
   return (
     <main>
-      <TopNav />
       <section className="layout">
         <SideNav />
         <div className="dashboard">
