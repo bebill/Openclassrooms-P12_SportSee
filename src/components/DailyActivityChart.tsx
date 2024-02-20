@@ -53,6 +53,7 @@ export const DailyActivityChart: React.FC<Props> = ({ data }) => {
         height={300}
         width={800}
         margin={{ top: 30, right: 30, left: 30, bottom: 0 }}
+        barGap={8}
         title="Activité quotidienne"
       >
         <CartesianGrid vertical={false} strokeDasharray="2 2" />
@@ -102,7 +103,7 @@ export const DailyActivityChart: React.FC<Props> = ({ data }) => {
               id: "calories",
               value: "Calories brûlées (kCal)",
               type: "circle",
-              color: "#ff0000",
+              color: "#E60000",
             },
           ]}
           wrapperStyle={{ top: -20 }}
@@ -112,14 +113,14 @@ export const DailyActivityChart: React.FC<Props> = ({ data }) => {
           dataKey="kilogram"
           fill="#282d30"
           barSize={7}
-          radius={[3, 3, 0, 0]}
+          radius={[20, 20, 0, 0]}
         />
         <Bar
           yAxisId="calories"
           dataKey="calories"
-          fill="#ff0000"
+          fill="#E60000"
           barSize={7}
-          radius={[3, 3, 0, 0]}
+          radius={[20, 20, 0, 0]}
         />
       </BarChart>
     </article>
