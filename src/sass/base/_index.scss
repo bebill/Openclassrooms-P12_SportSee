@@ -1,12 +1,13 @@
 body {
   margin: 0;
   min-width: 1024px;
-  max-width: 1440px;
+  // max-width: 1440px;
   min-height: 780px;
-  max-height: 1024px;
+  // max-height: 1024px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: auto;
 }
 
 ul {
