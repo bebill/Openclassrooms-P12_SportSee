@@ -2,6 +2,8 @@
 
 .sidenav {
     width: 120px;
+    min-height: 100vh;
+    position: absolute;
     background-color: variables.$blacknav;
     color: variables.$white;
 

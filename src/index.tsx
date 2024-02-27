@@ -10,12 +10,14 @@ import {
 import { User } from "./pages/user";
 import { Error404 } from "./pages/error404";
 import { TopNav } from "./layout/TopNav";
+import { SideNav } from "./layout/SideNav";
 
 const App = () => {
   return (
     <React.StrictMode>
       <Router>
         <TopNav />
+        <SideNav />
         <Routes>
           <Route path="/" element={<Navigate to="/user/18" />} />
           <Route path="/user/:id" element={<User />} />

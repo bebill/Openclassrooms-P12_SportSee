@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchUserData } from "../services/fetchData";
 import { useNavigate, useParams } from "react-router-dom";
-import { SideNav } from "../layout/SideNav";
 import DailyActivity from "../components/DailyActivity";
 import AverageSessions from "../components/AverageSessions";
 import Performance from "../components/Performance";
@@ -42,7 +41,6 @@ export const User = () => {
   return (
     <main>
       <section className="layout">
-        <SideNav />
         <div className="dashboard">
           <div className="welcome">
             <div className="hello">
