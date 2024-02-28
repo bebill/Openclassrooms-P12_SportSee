@@ -1,11 +1,8 @@
 import React from "react";
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
-import {
-  PerformanceEntry,
-  PerformanceModel,
-} from "../models/performanceDataFormat";
 
 interface DataItem {
+  kind: string;
   value: number;
 }
 
@@ -14,12 +11,19 @@ interface Props {
 }
 
 export const PerformanceChart: React.FC<Props> = ({ data }) => {
-  const performanceEntry: PerformanceEntry = {
-    data: data.map((item) => ({ value: item.value })),
-  };
+  const kind = [
+    "Intensité",
+    "Vitesse",
+    "Force",
+    "Endurance",
+    "Energie",
+    "Cardio",
+  ];
 
-  const performanceModel = new PerformanceModel(performanceEntry);
-  const performanceData = performanceModel.getPerformanceData();
+  const performanceData = data.map((item, index) => ({
+    kind: kind[index],
+    value: item.value,
+  }));
 
   return (
     <article className="performance-performance">
